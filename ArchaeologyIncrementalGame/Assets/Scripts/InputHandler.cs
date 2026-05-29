@@ -33,6 +33,7 @@ public class InputHandler : MonoBehaviour
             if (_autoClickTimer <= 0f)
             {
                 _autoClickTimer = autoClickInterval;
+                PerformClick();
                 Debug.Log(autoClickInterval);
             }
         }
@@ -41,6 +42,15 @@ public class InputHandler : MonoBehaviour
     {
         var rayhit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayhit.collider) return;
-        //Debug.Log(rayhit.collider.gameObject.name);
+        Debug.Log(rayhit.collider.gameObject.name);
+
+        if (rayhit)
+        {
+            IClickable clickable = rayhit.collider.GetComponent<IClickable>();
+            if (clickable != null)
+            {
+                clickable.OnClick();
+            }
+        }
     }
 }

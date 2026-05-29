@@ -25,7 +25,7 @@ public class CountdownTimer : MonoBehaviour
         if (!isRunning) return;
 
         _currentTime -= Time.deltaTime;
-        Debug.Log(_currentTime);
+        //Debug.Log(_currentTime);
 
         if (_currentTime <= 0)
         {
