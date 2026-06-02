@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class InputHandler : MonoBehaviour
 {
     private Camera _mainCamera;
-    public bool isClicked;
+    public event System.Action<Vector2> OnClickPerformed;
 
     [Header("Auto Click Settings")]
     public bool autoClick = false;
@@ -14,13 +14,11 @@ public class InputHandler : MonoBehaviour
     private void Awake()
     {
         _mainCamera = Camera.main;
-        isClicked = false;
         _autoClickTimer = autoClickInterval;
     }
 
     public void OnClick(InputAction.CallbackContext context)
     {
-        isClicked = true;
         if (!context.started) return;
         PerformClick();
     }
@@ -33,15 +31,17 @@ public class InputHandler : MonoBehaviour
             if (_autoClickTimer <= 0f)
             {
                 _autoClickTimer = autoClickInterval;
+                Vector2 mousePos = Mouse.current.position.ReadValue();
+                OnClickPerformed?.Invoke(mousePos);
                 PerformClick();
-                Debug.Log(autoClickInterval);
             }
         }
     }
-    private void PerformClick()
+    public void PerformClick()
     {
         var rayhit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayhit.collider) return;
+
         Debug.Log(rayhit.collider.gameObject.name);
 
         if (rayhit)
