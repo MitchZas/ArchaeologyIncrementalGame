@@ -27,7 +27,7 @@ public class CoinCounter : MonoBehaviour
     public void IncrementScore()
     {
         score++;
-        _scoreLabel.text = score.ToString();
+        _scoreLabel.text = "Coins: " + score.ToString();
     }
 
    
