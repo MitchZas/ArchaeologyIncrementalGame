@@ -1,4 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Label text="Label" name="TimerLabel" style="font-size: 40px; -unity-text-align: upper-right; width: 349px; height: 54px; align-items: flex-end; position: absolute; right: 20px; top: 20px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
-    <ui:Label text="Coins: 0" name="CoinLabel" style="width: 184px; left: 20px; top: 20px; align-items: flex-start; font-size: 40px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+    <ui:Label text="0" name="CoinLabel" style="width: 198px; left: 75px; top: 20px; align-items: flex-start; font-size: 40px; color: rgb(255, 255, 255); -unity-font-style: bold;"/>
+    <ui:Image name="CoinImage" source="project://database/Assets/Prefabs/Coins.png?fileID=2800000&amp;guid=ee6d9daf545388e4a95fef93727fa535&amp;type=3#Coins" tint-color="rgb(255, 229, 0)" style="height: 77px; width: 62px; left: 5px; position: absolute; top: 12px; font-size: 14px;"/>
 </ui:UXML>
