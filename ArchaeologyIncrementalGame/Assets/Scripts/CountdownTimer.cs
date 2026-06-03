@@ -41,5 +41,18 @@ public class CountdownTimer : MonoBehaviour
         int seconds = Mathf.FloorToInt(_currentTime);
         int milliseconds = Mathf.FloorToInt((_currentTime % 1) * 100);
         _timerLabel.text = string.Format("{0:00}:{1:00}", seconds, milliseconds);
+
+        if (_currentTime <=5)
+        {
+            _timerLabel.style.color = Color.red;
+        }
+        else if (_currentTime <=10)
+        {
+            _timerLabel.style.color = Color.yellow;
+        }
+        else
+        {
+            _timerLabel.style.color = Color.white;
+        }
     }
 }
