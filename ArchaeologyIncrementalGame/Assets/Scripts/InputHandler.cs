@@ -11,6 +11,9 @@ public class InputHandler : MonoBehaviour
     public float autoClickInterval = 1f;
     private float _autoClickTimer;
 
+    [Header("SFX")]
+    [SerializeField] private AudioSource sweepSFX;
+
     private void Awake()
     {
         _mainCamera = Camera.main;
@@ -33,6 +36,7 @@ public class InputHandler : MonoBehaviour
                 _autoClickTimer = autoClickInterval;
                 Vector2 mousePos = Mouse.current.position.ReadValue();
                 OnClickPerformed?.Invoke(mousePos);
+                sweepSFX.Play();
                 PerformClick();
             }
         }
