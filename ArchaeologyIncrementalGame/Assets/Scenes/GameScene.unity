@@ -1381,13 +1381,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 996802415}
     m_Modifications:
+    - target: {fileID: 4625319798296075800, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625319798296075800, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625319798296075800, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625319798296075800, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625319798296075800, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 6498089508894130980, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 6840832797861907110, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9752398
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 6840832797861907110, guid: a365741a9a6c29c4280fe8740f2c42aa, type: 3}
       propertyPath: m_LocalPosition.y

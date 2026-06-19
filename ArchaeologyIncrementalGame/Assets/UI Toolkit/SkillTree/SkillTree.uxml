@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ui="UnityEngine.UIElements"
-    xmlns:uie="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
->
-    
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/SkillTreeStyle.uss?fileID=7433441132597879392&amp;guid=8b16c3e3c826aa548a86c5461f448bdd&amp;type=3#SkillTreeStyle"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Label text="IMAGINE A SKILL TREE RIGHT HERE" class="header" style="bottom: auto; top: 500px; left: 550px; width: 782px;"/>
+        <ui:Button text="Back to Game" name="ContinueButton" class="button" style="position: absolute; bottom: 10%; right: auto; left: 50px;"/>
+    </ui:VisualElement>
 </ui:UXML>
